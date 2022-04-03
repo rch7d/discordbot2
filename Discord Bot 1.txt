@@ -1,0 +1,102 @@
+import discord
+
+TOKEN = ''
+client = discord.Client()
+
+
+@client.event
+async def on_ready():
+    print('We have logged in as {0.user}'.format(client))
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+@client.event
+async def on_message(message):
+    username = str(message.author).split('#')[0]
+    user_message = str(message.content)
+    channel = str(message.channel.name)
+    print(f'{username}: {user_message} ({channel})')
+    if message.author == client.user:
+        return
+    if message.channel.name == 'msg':
+        if user_message.lower() == 'hey':
+            await message.channel.send(f'heyyyyy wyd bae :heart_eyes:')  # lmao change this if u want
+            return
+        elif user_message.lower() == 'fuck you':
+            await message.channel.send(f'fuck you too bitch damn')  # might need to change this
+            return
+        elif user_message.lower() == 'yo':
+            await message.channel.send(f'yo')
+            return
+        elif user_message.lower() == 'nate':
+            await message.channel.send(f'fuck that stupid monkey <@!{379342681949601802}> :monkey:')
+            return
+        elif user_message.lower() == 'gay':
+            await message.channel.send(f'ur my little cupcake :pleading_face:')
+            return
+        elif user_message.lower() == 'cav':
+            await message.channel.send(f'STOP SCARING THE HOES AWAY <@!{425464472463736842}>')
+            return
+        elif user_message.lower() == 'mommy':
+            await message.channel.send(f'MOMMY I NEED MILKIES')
+            return
+        elif user_message.lower() == 'twerk':
+            await message.channel.send(f'https://tenor.com/view/twerking-twerk-booty-ass-wiggle-gif-8315980')
+            return
+        elif user_message.lower() == 'real':
+            await message.channel.send(f'REAL')
+            return
+        elif user_message.lower() == 'ria':
+            await message.channel.send(f'papa smurf descendant')
+            return
+        elif user_message.lower() == 'nigga':
+            await message.channel.send(
+                f'Its bigger than black and white, Its a problem with the whole way of life, It cant change overnight, But we gotta start somewhere, Might as well gon head start here, We done had a hell of a year, Ima make it count while Im here, God is the only man I fear.')
+            return
+        elif user_message.lower() == 'rip bozo':
+            await message.channel.send(f'https://tenor.com/view/packwatch-gif-22219180')
+            return
+        elif user_message.lower() == 'rich':
+            await message.channel.send(f'WAKE UP <@!{442137055523241984}>')
+            return
+        elif user_message.lower() == 'john':
+            await message.channel.send(f'wya COON <@!{483654121807806465}>')
+            return
+        elif user_message.lower() == 'josh':
+            await message.channel.send(f'GET A JOB ALREADY <@!{513842172362096643}>')
+            return
+        elif user_message.lower() == 'dylan':
+            await message.channel.send(f'My Lizard King :heart: <@!{919337419118116925}>')
+            return
+        elif user_message.lower() == 'ruben':
+            await message.channel.send(f'fat ugly stinky drug abusing mexican <@!{806927389078323201}>')
+            return
+        elif user_message.lower() == 'nigger':
+            await message.channel.send(f'someone said the hard R for you <@!{957507543352115210}>')
+            return
+        elif user_message.lower() == 'lmao':
+            await message.channel.send(f'LMFOAJFAFISJLNFPSJFOPED')
+            return
+        elif user_message.lower() == 'w':
+            await message.channel.send(f'W')
+            return
+        elif user_message.lower() == 'chris':
+            await message.channel.send(f'ur still BITCHLESS stfu <@!{353704604350808066}>')
+            return
+        elif user_message.lower() == 'owen':
+            await message.channel.send(f'daddy (aka mr. bitches) <@!{340505148683976715}>')
+            return
+        elif user_message.lower() == 'faith':
+            await message.channel.send(f'hey mommy text me back <@!{600536952047140865}>')
+            return
+        elif user_message.lower() == 'taylor':
+            await message.channel.send(f'im better than him give me a chance PLEASE <@!{763600340318158888}>')
+            return
+        elif user_message.lower() == 'zay':
+            await message.channel.send(f'stinky fortnite player <@!{893306544115052584}>')
+            return
+
+client.run(TOKEN)
